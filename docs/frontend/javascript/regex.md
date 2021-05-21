@@ -1,4 +1,4 @@
-#### 匹配模式
+## 匹配模式
 
 - g 全局匹配
 - i 忽略大小写
@@ -39,7 +39,7 @@ console.log(reg.exec(str)); // null
 console.log(reg.lastIndex); // 0
 ```
 
-#### 创建正则对象
+## 创建正则对象
 
 ```js
 // 字面量
@@ -48,7 +48,7 @@ let r1 = /u/g;
 let r2 = new RegExp("u", "g");
 ```
 
-#### 或 |
+## 或 |
 
 - 左右两边任意满足一个条件
 
@@ -59,7 +59,7 @@ let r3 = /xcf|.cm/;
 console.log(r3.test(str)); // false
 ```
 
-#### 原子表 []
+## 原子表 []
 
 - 匹配数组中的任意一个字符,就相当于把当前数组中的串拆成一个个单独的字符，每个字符之间是或的关系，使用 match 方法的时候，会匹配字符串中所有符合原子表中的每一项(全局匹配的情况下)。
 - `/[a-z]/` 区间匹配，匹配 a-z 的字母
@@ -78,7 +78,7 @@ str.match(r2) //["c", "h", "a", "n", "g", "f", "a", "n"]
 
 ```
 
-#### 原子组 ()
+## 原子组 ()
 
 - 使用原子组的方式
   - `\0`就代表整个匹配内容
@@ -169,7 +169,7 @@ console.log(
 );
 ```
 
-#### 正则中的转义
+## 正则中的转义
 
 - `.` 点在正则中代表除了换行外的所有字符
 - `\d` 代表数字
@@ -184,7 +184,7 @@ r5.test(price); // true
 price.match(r5); // .5
 ```
 
-#### 边界限定
+## 边界限定
 
 - `^` 限定起始位置
 - `$` 限定结束位置
@@ -198,7 +198,7 @@ document.querySelector('[name="test"]').addEventListener("keyup", function(e) {
 });
 ```
 
-#### 元字符 （大小写字母都是相对的 反向的）
+## 元字符 （大小写字母都是相对的 反向的）
 
 - `` 空格也是基本字符 同 abcd 一样
 - `\d` 0-9 的数字
@@ -209,13 +209,13 @@ document.querySelector('[name="test"]').addEventListener("keyup", function(e) {
 - `\W` 除了字母数字和下划线
 - '.' 除了换行符的任意字符 囊括了 `\d \w`,也能匹配空格键，但是不能匹配换行键，和`\s`有区别。
 
-#### 汉字与字符属性
+## 汉字与字符属性
 
 - 结合`\p{L}` 表示字母
 - 结合`\p{P}` 表示符号
 - 结合`\p{sc=Han}` 表示匹配汉字
 
-#### `lastIndex`属性
+## `lastIndex`属性
 
 > 标志当前正则执行匹配(结合`exec()`方法使用)的位置
 
@@ -233,7 +233,7 @@ console.log(reg.exec(str)); // u
 console.log(reg.lastIndex); // 2
 ```
 
-#### 重复匹配
+## 重复匹配
 
 - 描述数量，都是贪婪匹配，如果同时满足，会尽可能的多匹配字符，如果跟在原子组后，会影响整个原子组
   - `*` 0-n
@@ -260,7 +260,7 @@ console.log(reg.lastIndex); // 2
 </body>
 ```
 
-#### 多个正则校验一个 str
+## 多个正则校验一个 str
 
 ```js
 document.querySelector('[name="test"]').addEventListener("keyup", function(e) {
@@ -270,7 +270,7 @@ document.querySelector('[name="test"]').addEventListener("keyup", function(e) {
 });
 ```
 
-#### `matchAll`及其`polyfill`
+## `matchAll`及其`polyfill`
 
 - `matchAll()`方法可以配合全局匹配模式获得一个当前所有匹配内容的迭代器,这样就可以通过获取每个迭代中的原子组内容，这是`match()`中得不到的，`match()`之中只有当前匹配的串。
 
@@ -299,12 +299,12 @@ String.prototype.matchAll = function(reg) {
 };
 ```
 
-#### 正则方法
+## 正则方法
 
 - `RegExp.prototype.test`字符串是否通过正则检测，返回是否通过检测
 - `RegExp.prototype.exec`执行一次匹配，返回匹配结果，匹配成功后`lastIndex`+1
 
-#### 字符串方法
+## 字符串方法
 
 - `String.prototype.match`寻找匹配内容，获取匹配内容的每个原子组,当加入全局查找时，就会丢弃原子组的内容，返回每一个匹配的完整的字符串,如果即需要全局查找又需要获取每个院子组就可以通过使用 matchAll 达到目的,使用 exec 操作也是可以达到目的
 
@@ -362,7 +362,7 @@ Array.from(str.matchAll(regexp), (m) => m[0]);
 - `String.prototype.split`拆分字符串
 - `String.prototype.replace`替换
 
-#### 断言匹配
+## 断言匹配
 
 - 判断上下文环境的匹配，当字符串本身相同的时候，但是前后字符不同，可以通过断言匹配来检测。
 - 注意：断言匹配虽然在括号中，但它不是原子组。

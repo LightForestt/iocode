@@ -1,4 +1,4 @@
-#### `SEO` 优化
+## `SEO` 优化
 
 Search Engine Optimization 搜索引擎优化。
 
@@ -73,7 +73,7 @@ ul {
 }
 ```
 
-#### `<table>` 表格
+## `<table>` 表格
 
 ```html
     <table class="table">
@@ -116,7 +116,7 @@ table {
 }
 ```
 
-#### `<from>`表单
+## `<from>`表单
 
 ```html
 <form action="">
@@ -152,6 +152,8 @@ table {
   reset: <input type="reset" value="" /><br />
 </form>
 ```
+
+## text
 
 #### `text-indent` 字符缩进
 
@@ -274,8 +276,6 @@ table {
 
 #### `line-height` 行高
 
-![baseline](C:\Users\Mr.Xu\Desktop\CODE\note.md\css\css.learn.imgs\baseline.png)
-
 ```less
 #id {
   // line-height 行高是两行文字 baseline 之间的间距，也就是行距 + 文字高度
@@ -297,6 +297,8 @@ table {
   font: italic small-caps bold 20px/50px "宋体";
 }
 ```
+
+## 伪类
 
 #### 动态伪类
 
@@ -409,7 +411,7 @@ body :not(div) {
 }
 ```
 
-#### css 的特性
+## css 的特性
 
 - 继承
 
@@ -460,7 +462,7 @@ class(10)|属性选择器(10)|伪类(10) >
   2. 选择器书写错误
   3. css 使用错误 浏览器无法识别属性值 或者当前属性不包含当前设置值
 
-#### html 中的元素类型及其 css 特性
+## html 中的元素类型及其 css 特性
 
 ```less
 //根据盒子排列方式
@@ -481,9 +483,7 @@ span div p pre ...
 
 ```
 
-![块级元素](C:\Users\Mr.Xu\Desktop\CODE\note.md\css\css.learn.imgs\块级元素.png)
-
-#### 行内非替换元素`(display:inline)`的注意点 ：
+## 行内非替换元素`(display:inline)`的注意点 ：
 
 - 以下属性不起作用
 
@@ -567,7 +567,7 @@ div {
 > 默认 `content-box` 内容盒子 设置宽高的时候指定的是内容的宽高
 > `border-box` 边框盒子 设置宽高时包含 border 和内边距
 
-#### css 水平居中及原理
+## css 水平居中及原理
 
 - 普通文本 `div{text}`
 
@@ -682,7 +682,7 @@ div {
 > - `text` 一条竖线
 > - `none` 没有指针
 
-#### `position` 定位
+## `position` 定位
 
 > - `static` 静态定位 就是标准流中
 >   **在静态定位时设置`top right left bottom` 没有效果**
@@ -881,7 +881,7 @@ div {
 > - 非父子关系且不为兄弟元素
 >   - 找到相邻定位的祖先元素（当不是定位祖先元素，说明相邻祖先就在标准流中，此时比较元素是绝对不会重叠的）按照上述兄弟比较法去比较。层叠等级也是自包含的。
 
-#### `float` 浮动
+## `float` 浮动
 
 > 在 css 中有三种常用法对元素进行定位和布局
 >
@@ -956,6 +956,8 @@ div {
 }
 ```
 
+## transform
+
 #### `transform` 转换 对`inline`元素无效
 
 > - `translate(x,y)`平移 百分比参照物的是元素本身`bounding-box`
@@ -1006,7 +1008,7 @@ img {
 }
 ```
 
-#### 语义化元素
+## 语义化元素
 
 > `<header> <nav> <main> <footer> <section> <artical> <aside>`等等，这些不是特殊元素 只是个块级元素，只是增加了语义化。
 
@@ -1041,7 +1043,7 @@ img {
 
 > - `<input placeholder="" multiple autofocus >`
 
-#### `flex`布局 **_超级重要_**
+## `flex`布局 **_超级重要_**
 
 > - `inline-flex` 使用后变成行内的弹性盒子
 > - `flex` 使用后弹性盒子是块级的弹性盒子
@@ -1129,7 +1131,7 @@ img {
 > - `align-self`,`flex-items`可以通过设置此属性覆盖在弹性盒子中设置的`align-items`
 > - 默认和父级弹性盒子中`align-items`设置值一致。
 
-#### 网络字体
+## 网络字体
 
 > - 常见字体类型 `.ttf .otf .eot .svg .svgz .woff` 设置多种字体来进行兼容性。
 
@@ -1146,7 +1148,7 @@ div {
 }
 ```
 
-#### 字体图标原理,本质是也是字体，受`font-size`影响,不会失真。
+## 字体图标原理,本质是也是字体，受`font-size`影响,不会失真。
 
 > - 就是将字体变成图标的样子。首先下载各种格式的文字字体下载到本地，通过使用图标对应的编码进行应用。
 
@@ -1195,7 +1197,7 @@ div {
 }
 ```
 
-#### 关键帧动画 `animation && keyframe`
+## 关键帧动画 `animation && keyframe`
 
 > - `transtion`过渡实际上是两帧
 > - `from - 0% to - 100%`
@@ -1294,7 +1296,7 @@ body {
 }
 ```
 
-#### `rem`的移动端适配
+## `rem`的移动端适配
 
 - 方案一 使用媒体查询
 

@@ -1,5 +1,3 @@
-[toc]
-
 ## 响应式布局原理，结论：
 
 - 不同的分辨率使用的 dpr 不同 ，最终达到了 1px 在不同设备看起来相同的目的。 viewport 并不影响各设备的 1px 的等价关系（缩放前后各设备间的 1px 始终是相等的），造成的影响是设备上的 1px 的视觉效果大了还是小了。也就是相当于操作了 dpr（实际上大家都默认缩放比率 1，同时设置 width 为设备宽度，同时不允许缩放）。rem 以 px 为单位，以当前设备宽度为分母，以设计稿为分子，计算出设计稿与当前设备的比例，最终利用比例计算出适合当前设备的 fontsize 赋予给 html，在进行编码的时候直接使用 rem，最终，达到了响应式的目的。
@@ -45,21 +43,20 @@
 </style>
 ```
 
-- 简单的理解，viewport 是严格等于浏览器的窗口。在桌面浏览器中，viewport 就是浏览器窗口的宽度高度。但在移动端设备上就有点复杂。
+简单的理解，viewport 是严格等于浏览器的窗口。在桌面浏览器中，viewport 就是浏览器窗口的宽度高度。但在移动端设备上就有点复杂。
+移动端的 viewport 太窄，为了能更好为 CSS 布局服务，所以提供了两个 viewport:
 
-- 移动端的 viewport 太窄，为了能更好为 CSS 布局服务，所以提供了两个 viewport:
+1. 虚拟的 viewport - visual viewport
 
-  1. 虚拟的 viewport - visual viewport
+   visual viewport 就是显示在屏幕上的网页区域。通过前面的说明你应该已经知道 visual viewport 了：它往往只显示 layout viewport 的一部分。visual viewport 就像一台摄像机，layout viewport 就像一张纸，摄像机对准纸的哪个部分，你就能看见哪个部分。你可以改变摄像机的拍摄区域大小（调整浏览器窗口大小），也可以调整摄像机的距离（调整缩放比例），这些方法都可以改变 visual viewport，但是 layout viewport 始终不变。
 
-     visual viewport 就是显示在屏幕上的网页区域。通过前面的说明你应该已经知道 visual viewport 了：它往往只显示 layout viewport 的一部分。visual viewport 就像一台摄像机，layout viewport 就像一张纸，摄像机对准纸的哪个部分，你就能看见哪个部分。你可以改变摄像机的拍摄区域大小（调整浏览器窗口大小），也可以调整摄像机的距离（调整缩放比例），这些方法都可以改变 visual viewport，但是 layout viewport 始终不变。
+   **visual viewport 用 css 像素来衡量尺寸，表示有多少个 css 像素能够被用户看到。**
 
-     **visual viewport 用 css 像素来衡量尺寸，表示有多少个 css 像素能够被用户看到。**
+2. 布局的 viewport - layout viewport
 
-  2. 布局的 viewport - layout viewport
+   layout viewport 是网页布局的区域，它是\<html\>元素的父容器。只要你不在 css 中修改\<html\>元素的宽度，\<html\>元素的宽度就会撑满 layout viewport 的宽度。很多时候浏览器窗口没有办法显示出 layout viewport 的全貌，但是它确实是已经被加载出来了，这个时候滚动条就出现了，你需要通过滚动条来浏览 layout viewport 其他的部分。
 
-     layout viewport 是网页布局的区域，它是<html>元素的父容器。只要你不在 css 中修改<html>元素的宽度，<html>元素的宽度就会撑满 layout viewport 的宽度。很多时候浏览器窗口没有办法显示出 layout viewport 的全貌，但是它确实是已经被加载出来了，这个时候滚动条就出现了，你需要通过滚动条来浏览 layout viewport 其他的部分。
-
-     **layout viewport 用 css 像素来衡量尺寸，在缩放、调整浏览器窗口的时候不会改变**。**缩放、调整浏览器窗口改变的只是 visual viewport。**
+   **layout viewport 用 css 像素来衡量尺寸，在缩放、调整浏览器窗口的时候不会改变**。**缩放、调整浏览器窗口改变的只是 visual viewport。**
 
 ### DP 物理像素
 
@@ -160,7 +157,7 @@ not:
 | device-pixel-ratio     | css 像素比。 css 像素/物理像素。必须加 webkit 前缀。 数字 |
 | max-device-pixel-ratio | css 像素比。 css 像素/物理像素。必须加 webkit 前缀。      |
 | min-device-pixel-ratio | css 像素比。 css 像素/物理像素。必须加 webkit 前缀。      |
-| device-height          | 定义输出设备的屏幕可见高度。<length>                      |
+| device-height          | 定义输出设备的屏幕可见高度。\<length\>                    |
 | max-device-height      | 定义输出设备的屏幕可见的最大高度。                        |
 | min-device-height      | 定义输出设备的屏幕的最小可见高度。                        |
 | device-width           | 定义输出设备的屏幕可见宽度。                              |

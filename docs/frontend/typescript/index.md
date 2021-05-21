@@ -1,6 +1,6 @@
 ## typescript 基础知识
 
-### 1. 变量声明
+###  变量声明
 
 ##### 基本类型
 
@@ -168,8 +168,8 @@ p.f();
 ```typescript
 // **************************此处特别注意START**************************
 // 在对象中冒号有两种含义
-// 1. 声明新的变量 例如 let{ v1:value1,v2:value2} 这种写法标识先将v1从obj中解构出来 然后赋值给value1
-// 2. 是指定类型 就如 let{v1,v2} :{v1:string,v2:number} 由于直接在变量声明处使用冒号会导致重新赋值（也就是上述原因） 所以只能通过为整个对象指定类型的方式来检测类型
+//  声明新的变量 例如 let{ v1:value1,v2:value2} 这种写法标识先将v1从obj中解构出来 然后赋值给value1
+//  是指定类型 就如 let{v1,v2} :{v1:string,v2:number} 由于直接在变量声明处使用冒号会导致重新赋值（也就是上述原因） 所以只能通过为整个对象指定类型的方式来检测类型
 // 如下：
 //指定对象中的值类型
 let { x, y }: { x: string; y: string } = o;
@@ -581,19 +581,19 @@ class S implements color, shape {
 }
 
 // 如果想调用接口中的属性有三种方式
-// 1. 实例化继承类S的方式去使用S的属性
+//  实例化继承类S的方式去使用S的属性
 let s = new S();
 s.color = "red";
 s.size = 100;
 s.chief = "fcx";
 
-// 2. 创建空类并断言成类型S去使用S的属性
+//  创建空类并断言成类型S去使用S的属性
 let s2 = {} as S;
 s2.color = "red";
 s2.chief = "fcx";
 s2.size = 200;
 
-// 3. 继承方接口 + 断言
+//  继承方接口 + 断言
 // 构建一个新的接口SI然后多继承所需接口 然后创建一个空对象断言成SI类型进行使用
 interface SI extends shape, color {
   chief: string;
@@ -665,7 +665,7 @@ let a4 = a2 as string;
 console.log(a3.length);
 ```
 
-### 2. 属性修饰符 [比对 es5 es6 ts]
+###  属性修饰符 [比对 es5 es6 ts]
 
 ##### ES5
 
@@ -781,7 +781,7 @@ class Person {
 }
 ```
 
-### 3. ts 中的 this（和 js 中的 this 类似）
+###  ts 中的 this（和 js 中的 this 类似）
 
 ```typescript
 class Person {
@@ -863,7 +863,7 @@ var Test = /** @class */ (function() {
 })();
 ```
 
-### 4. 函数重载
+###  函数重载
 
 ```typescript
 // 实现写在最后
@@ -880,7 +880,7 @@ function funcTest(x: any, y: number) {
 funcTest({ name: "zhangsan" }, 15);
 ```
 
-### 5. 泛型
+###  泛型
 
 - 泛型变量
 
@@ -973,7 +973,7 @@ function factory2<T>(ctor: new () => T): T {
 }
 ```
 
-### 6. 高级类型
+###  高级类型
 
 - 交叉类型
 
@@ -1132,7 +1132,7 @@ f(null);
 type Ease = "ease-in" | "ease-out" | "ease-in-out";
 ```
 
-### 7. interface 和 type 的终极对比
+###  interface 和 type 的终极对比
 
 - 描述对象或函数
 

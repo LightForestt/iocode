@@ -174,36 +174,28 @@ $ npm uninstall --save lodash
 
 node 常用内置 api
 
-(1) URL 网址解析
-解析 URL 相关网址信息
+URL 网址解析
+
+```js
 url.parse(urlString[, parseQueryString[, slashesDenoteHost]])
 url.format(urlObject)
 url.resolve(from, to)
-(2) QueryString 参数处理
+```
+QueryString 参数处理
+
+```js
 querystring.escape(str)
 querystring.unescape(str)
 querystring.parse(str[, sep[, eq[, options]]])
 querystring.stringify(obj[, sep[, eq[, options]]])
-(3) HTTP 模块概要
+```
+
+HTTP 
+```js
 http.createServer([options][, requestlistener])
 http.get(options[, callback])
-简易的爬虫
-代理跨域处理
-(4) 事件 events 模块
-(5) 文件 fs 模块
-打印目录树
-(6) Stream 流模块
-歌词播放
-音乐下载
-(8) request 方法
+```
 
-2、Node.js 基础应用
-1、应用 HTTP 模块编写一个小爬虫工具
-(1) 利用爬虫获取“拉勾网”首页列表数据
-(2) 通过 npm 安装 cheerio 模块获得数据
-2、后端表单的提交
-要求:
-(1) 应用 request post 模拟提交表单
 
 ### 文件读取
 

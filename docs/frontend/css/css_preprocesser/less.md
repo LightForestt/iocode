@@ -10,7 +10,7 @@
 
 提示：（vscode - easy less / compile hero 插件直接编译 less）
 
-### 0.注释
+### 注释
 
 ```less
 // 开发注释 这种注释不会被编译到css文件中去
@@ -246,7 +246,7 @@ div {
 }
 ```
 
-### 4.less 的计算
+### less 的计算
 
 ```less
 // less计算  只需要一方带单位就好了 单位不同以前边的为准
@@ -256,7 +256,7 @@ div {
 }
 ```
 
-### 5.less 的继承
+### less 的继承
 
 ```less
 .center {
