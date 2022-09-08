@@ -1,53 +1,53 @@
 module.exports = {
-  title: " Best Programming Language ？ 😈 JAVASCRIPT",
-  description: "Just learn and run",
+  title: " learning 🤔",
+  description: "ing",
   themeConfig: {
     sidebarDepth: 2,
     sidebar: [
       {
         title: "frontend",
         children: [
-          // {
-          //   title: "javascript",
-          //   children: [
-          //     [
-          //       "/frontend/javascript/promise_await_async/",
-          //       "promise的前世今生",
-          //     ],
-          //     ["/frontend/javascript/regex", "正则表达式"],
-          //     ["/frontend/javascript/base", "js基础"],
-          //   ],
-          // },
-          //   {
-          //     title: "html",
-          //     children: [
-          //       ["/frontend/browser/dom_bom/", "基本 dom bom 操作"],
-          //       ["/frontend/browser/dom_bom/vue_dom", "源码中用到的 dom 操作"],
-          //     ],
-          //   },
-          // {
-          //   title: "css",
-          //   children: [
-          //     ["/frontend/css/base_css_html/", "css 常用基础知识"],
-          //     ["/frontend/css/css_preprocesser/less", "less"],
-          //     {
-          //       path: "/frontend/css/css_preprocesser/stylus",
-          //       title: "stylus",
-          //       sidebarDepth: 1,
-          //     },
-          //   ],
-          // },
-          // {
-          //   title: "browser",
-          //   children: [
-          //     ["/frontend/browser/dom_bom/", "基本 dom bom 操作"],
-          //     ["/frontend/browser/dom_bom/vue_dom", "源码中用到的 dom 操作"],
-          //   ],
-          // },
-          // {
-          //   title: "typescript",
-          //   children: [["/frontend/typescript/", "typescript 基础"]],
-          // },
+          {
+            title: "javascript",
+            children: [
+              [
+                "/frontend/javascript/promise_await_async/",
+                "promise的前世今生",
+              ],
+              ["/frontend/javascript/regex", "正则表达式"],
+              ["/frontend/javascript/base", "js基础"],
+            ],
+          },
+            {
+              title: "html",
+              children: [
+                ["/frontend/browser/dom_bom/", "基本 dom bom 操作"],
+                ["/frontend/browser/dom_bom/vue_dom", "源码中用到的 dom 操作"],
+              ],
+            },
+          {
+            title: "css",
+            children: [
+              ["/frontend/css/base_css_html/", "css 常用基础知识"],
+              ["/frontend/css/css_preprocesser/less", "less"],
+              {
+                path: "/frontend/css/css_preprocesser/stylus",
+                title: "stylus",
+                sidebarDepth: 1,
+              },
+            ],
+          },
+          {
+            title: "browser",
+            children: [
+              ["/frontend/browser/dom_bom/", "基本 dom bom 操作"],
+              ["/frontend/browser/dom_bom/vue_dom", "源码中用到的 dom 操作"],
+            ],
+          },
+          {
+            title: "typescript",
+            children: [["/frontend/typescript/", "typescript 基础"]],
+          },
           //   {
           //     title: "build_tools",
           //     children: [
@@ -59,14 +59,14 @@ module.exports = {
           //     children: [
           //     ],
           //   },
-          // {
-          //   title: "nodejs",
-          //   children: [
-          //     ["/frontend/nodejs/", "node 基础知识"],
-          //     ["/frontend/nodejs/express", "express 基础知识"],
-          //     ["/frontend/nodejs/nvm", "nvm 版本控制"],
-          //   ],
-          // },
+          {
+            title: "nodejs",
+            children: [
+              ["/frontend/nodejs/", "node 基础知识"],
+              ["/frontend/nodejs/express", "express 基础知识"],
+              ["/frontend/nodejs/nvm", "nvm 版本控制"],
+            ],
+          },
           {
             title: "vuejs",
             children: [
@@ -89,26 +89,26 @@ module.exports = {
           //   },
         ],
       },
-    //   {
-    //     title: "backend",
-    //     children: [
-    //       {
-    //         title: "mysql",
-    //         children: [],
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     title: "basic",
-    //     children: [
-    //       {
-    //         title: "浏览器相关",
-    //         children: [
+      {
+        title: "backend",
+        children: [
+          {
+            title: "mysql",
+            children: [],
+          },
+        ],
+      },
+      {
+        title: "basic",
+        children: [
+          {
+            title: "浏览器相关",
+            children: [
              
-    //         ],
-    //       },
-    //     ],
-    //   },
+            ],
+          },
+        ],
+      },
     ],
   },
 };
